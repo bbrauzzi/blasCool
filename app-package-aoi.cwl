@@ -62,7 +62,7 @@ $graph:
       doc: Layer to process
       label: Layer to process
       type:
-        -symbols:
+        - symbols:
           - "ESA World Cover"
           - "Copernicus DEM World Cover"
           - "DLR World Settlement Footprint"
@@ -73,7 +73,7 @@ $graph:
           - "JRC Global Surface Water - Recurrence"
           - "JRC Global Surface Water - Seasonality"
           - "JRC Global Surface Water - Transitions"
-        type: enum
+          type: enum
     
     string_with_options_parameter_1:
       label: Title of string_with_options_parameter1
