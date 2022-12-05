@@ -74,6 +74,27 @@ $graph:
         - "JRC Global Surface Water - Seasonality"
         - "JRC Global Surface Water - Transitions"
         type: enum
+    
+    string_with_options_parameter_1:
+      label: Title of string_with_options_parameter1
+      type:
+        - type: enum
+          symbols: 
+            - ‘option1’
+            - ‘option2’
+            - ‘option3’
+
+    string_with_options_parameter_2:
+      label: Title of string_with_options_parameter2
+      type:
+        - type: enum
+          symbols: 
+            - "option1"
+            - "option2"
+            - "option3"
+
+
+
   label: mosaic
   outputs:
   - id: wf_outputs
