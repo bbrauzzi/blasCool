@@ -50,7 +50,6 @@ $graph:
         label: Area of interest
         type: string
       layer:
-        doc: Layer to process
         label: Layer to process
         type:
           type: enum
