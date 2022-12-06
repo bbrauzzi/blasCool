@@ -10,6 +10,7 @@ $graph:
         type: string
       layer:
         type:
+          type: enum
           symbols:
             - "ESA World Cover"
             - "Copernicus DEM World Cover"
@@ -21,7 +22,6 @@ $graph:
             - "JRC Global Surface Water - Recurrence"
             - "JRC Global Surface Water - Seasonality"
             - "JRC Global Surface Water - Transitions"
-          type: enum
     arguments:
       - --buffer
       - "0.05"
@@ -53,6 +53,7 @@ $graph:
         doc: Layer to process
         label: Layer to process
         type:
+          type: enum
           symbols:
             - "ESA World Cover"
             - "Copernicus DEM World Cover"
@@ -64,7 +65,6 @@ $graph:
             - "JRC Global Surface Water - Recurrence"
             - "JRC Global Surface Water - Seasonality"
             - "JRC Global Surface Water - Transitions"
-          type: enum
     label: mosaic
     outputs:
       - id: wf_outputs
