@@ -83,4 +83,4 @@ $namespaces:
   s: https://schema.org/
 schemas:
   - http://schema.org/version/9.0/schemaorg-current-http.rdf
-s:softwareVersion: 0.2.0
+s:softwareVersion: 0.2.1
