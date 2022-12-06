@@ -53,18 +53,18 @@ $graph:
         doc: Layer to process
         label: Layer to process
         type:
-          - symbols:
-              - "ESA World Cover"
-              - "Copernicus DEM World Cover"
-              - "DLR World Settlement Footprint"
-              - "World Population"
-              - "JRC Global Surface Water - Change"
-              - "JRC Global Surface Water - Extent"
-              - "JRC Global Surface Water - Occurrence"
-              - "JRC Global Surface Water - Recurrence"
-              - "JRC Global Surface Water - Seasonality"
-              - "JRC Global Surface Water - Transitions"
-            type: enum
+          symbols:
+            - "ESA World Cover"
+            - "Copernicus DEM World Cover"
+            - "DLR World Settlement Footprint"
+            - "World Population"
+            - "JRC Global Surface Water - Change"
+            - "JRC Global Surface Water - Extent"
+            - "JRC Global Surface Water - Occurrence"
+            - "JRC Global Surface Water - Recurrence"
+            - "JRC Global Surface Water - Seasonality"
+            - "JRC Global Surface Water - Transitions"
+          type: enum
     label: mosaic
     outputs:
       - id: wf_outputs
