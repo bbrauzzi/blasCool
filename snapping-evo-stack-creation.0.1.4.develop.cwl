@@ -73,8 +73,8 @@ $graph:
         label: polarisation
         type: string?
       min_overlap:
-        doc: 'Int value between 1-100: All S1 secondaries overlaping AOI < will be discarded'
-        label: 'Int value between 1-100: All S1 secondaries overlaping AOI < will be discarded'
+        doc: 'Int value between 1-100: All S1 secondaries overlaping AOI less than this value will be discarded'
+        label: 'Int value between 1-100: All S1 secondaries overlaping AOI less than this value will be discarded'
         type: string
       _T2Username:
         doc: Terradue username
