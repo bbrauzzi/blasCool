@@ -26,15 +26,15 @@ $graph:
         doc: DEM type to be applied
         label: DEM type to be applied
         type:
-          symbols: ["SRTM 3Sec", "SRTM 1Sec HGT"]
-          type: enum
+          - symbols: ["SRTM 3Sec", "SRTM 1Sec HGT"]
+            type: enum
       platform:
         default: "both"
         doc: Scondary selection from catalog
         label: Scondary selection from catalog
         type:
-          type: enum
-          symbols: ["S1A", "S1B", "both"]
+          - type: enum
+            symbols: ["S1A", "S1B", "both"]
       stack:
         doc: Interferometric stack title, no special char
         label: Interferometric stack title, no special char
@@ -57,15 +57,15 @@ $graph:
         doc: First Month to Drop
         label: First Month to Drop
         type:
-          type: enum
-          symbols: ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec", "NA"]
+          - type: enum
+            symbols: ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec", "NA"]
       end_season:
         default: "NA"
         doc: Last Month to Drop
         label: Last Month to Drop
         type:
-          type: enum
-          symbols: ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec", "NA"]
+          - type: enum
+            symbols: ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec", "NA"]
       aoi_coreg:
         default: True
         doc: Coregistering with AOI
