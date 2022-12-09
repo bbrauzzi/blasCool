@@ -10,10 +10,6 @@ $graph:
     id: stack-creation
     label: Creates a new Stack
     inputs:
-      wps_url:
-        doc: URL of WPS
-        label: URL of WPS
-        type: string
       process_id:
         doc: Process ID
         label: Process ID
@@ -96,7 +92,6 @@ $graph:
     steps:
       step_1:
         in:
-          wps_url: wps_url
           process_id: process_id
           reference: reference
           dem: dem
@@ -121,7 +116,7 @@ $graph:
     arguments:
       - ifg-stack-creation
       - --wps
-      - "http://ades.snapping.terradue.com/snapping/zoo-bin/zoo_loader.cgi?"
+      - "https://ades.snapping.terradue.com/snapping/zoo-bin/zoo_loader.cgi?"
       - --datapipeline
       - valueFrom: ${ return inputs._T2Username; }
       - --s3_bucket
@@ -129,94 +124,89 @@ $graph:
       - --force_creation
       - "False"
     inputs:
-      wps_url:
-        inputBinding:
-          position: 1
-          prefix: --wps
-        type: string
       process_id:
         inputBinding:
-          position: 2
+          position: 1
           prefix: --pid
         type: string
       reference:
         type:
           inputBinding:
-            position: 3
+            position: 2
             prefix: --reference
           items: string
           type: array
       dem:
         inputBinding:
-          position: 4
+          position: 3
           prefix: --dem
         type:
           symbols: ["SRTM 3Sec", "SRTM 1Sec HGT"]
           type: enum
       platform:
         inputBinding:
-          position: 5
+          position: 4
           prefix: --platform
         type:
           type: enum
           symbols: ["S1A", "S1B", "both"]
       stack:
         inputBinding:
-          position: 6
+          position: 5
           prefix: --stack
         type: string
       stopdate:
         inputBinding:
-          position: 7
+          position: 6
           prefix: --stopdate
         type: string
       aoi:
         inputBinding:
-          position: 8
+          position: 7
           prefix: --aoi
         type: string
       exclude_season:
         inputBinding:
-          position: 9
+          position: 8
           prefix: --exclude_season
         type: string?
       start_season:
         inputBinding:
-          position: 10
+          position: 9
           prefix: --start_season
         type:
           type: enum
           symbols: ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec", "NA"]
       end_season:
         inputBinding:
-          position: 11
+          position: 10
           prefix: --end_season
         type:
           type: enum
           symbols: ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec", "NA"]
       aoi_coreg:
         inputBinding:
-          position: 12
+          position: 11
           prefix: --aoi_coreg
         type: string?
       pol:
         inputBinding:
-          position: 13
+          position: 12
           prefix: --pol
         type: string?
       min_overlap:
         inputBinding:
-          position: 14
+          position: 13
           prefix: --min_overlap
         type: string
       _T2Username:
         inputBinding:
-          position: 15
+          position: 14
           prefix: --username
         type: string
       _T2ApiKey:
         inputBinding:
-          position: 16
+          position: 15
           prefix: --api_key
         type: string
     outputs:
@@ -233,3 +223,4 @@ $graph:
         ramMax: 2048
       DockerRequirement:
         dockerPull: docker.terradue.com/snapping-evo:0.1.4-develop
+      InlineJavascriptRequirement: {}
