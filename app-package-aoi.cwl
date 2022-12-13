@@ -10,23 +10,23 @@ $graph:
       type: string
     layer:
       type:
-        symbols:
-        - "ESA World Cover"
-        - "Copernicus DEM World Cover"
-        - "DLR World Settlement Footprint"
-        - "World Population"
-        - "JRC Global Surface Water - Change"
-        - "JRC Global Surface Water - Extent"
-        - "JRC Global Surface Water - Occurrence"
-        - "JRC Global Surface Water - Recurrence"
-        - "JRC Global Surface Water - Seasonality"
-        - "JRC Global Surface Water - Transitions"
-        type: enum
+        - symbols:
+          - "ESA World Cover"
+          - "Copernicus DEM"
+          - "DLR World Settlement Footprint"
+          - "World Population"
+          - "JRC Global Surface Water - Change"
+          - "JRC Global Surface Water - Extent"
+          - "JRC Global Surface Water - Occurrence"
+          - "JRC Global Surface Water - Recurrence"
+          - "JRC Global Surface Water - Seasonality"
+          - "JRC Global Surface Water - Transitions"
+          type: enum
   arguments:
   - --buffer
   - "0.05"
   - valueFrom: ${ if (inputs.layer == "ESA World Cover") { return ["--esa-world-cover"]; }
-                  if (inputs.layer == "Copernicus DEM World Cover") { return ["--cop-dem"]; }
+                  if (inputs.layer == "Copernicus DEM") { return ["--cop-dem"]; }
                   if (inputs.layer == "JRC Global Surface Water - Change") { return ["--global-surface-water", "--layer", "change"]}
                   if (inputs.layer == "JRC Global Surface Water - Extent") { return ["--global-surface-water", "--layer", "extent"]}
                   if (inputs.layer == "JRC Global Surface Water - Occurrence") { return ["--global-surface-water", "--layer", "occurrence"]}
@@ -64,7 +64,7 @@ $graph:
       type:
         - symbols:
           - "ESA World Cover"
-          - "Copernicus DEM World Cover"
+          - "Copernicus DEM"
           - "DLR World Settlement Footprint"
           - "World Population"
           - "JRC Global Surface Water - Change"
@@ -74,27 +74,6 @@ $graph:
           - "JRC Global Surface Water - Seasonality"
           - "JRC Global Surface Water - Transitions"
           type: enum
-    
-    string_with_options_parameter_1:
-      label: Title of string_with_options_parameter1
-      type:
-        type: enum
-        symbols: 
-          - "option1"
-          - "option2"
-          - "option3"
-
-    string_with_options_parameter_2:
-      label: Title of string_with_options_parameter2
-      type:
-        - type: enum
-          symbols: 
-            - "option1"
-            - "option2"
-            - "option3"
-
-
-
   label: mosaic
   outputs:
   - id: wf_outputs
@@ -116,4 +95,4 @@ $namespaces:
   s: https://schema.org/
 schemas:
   - http://schema.org/version/9.0/schemaorg-current-http.rdf
-s:softwareVersion: 0.1.0
+s:softwareVersion: 0.3.0
