@@ -21,17 +21,6 @@ $graph:
         position: 3
         prefix: --aoi
       type: string?
-    coreg_type:
-      inputBinding:
-        position: 4
-        prefix: --coregistration
-      type:
-        - type: enum
-          symbols: &id001
-          - Automatic
-          - Rigid
-          - Elastic
-
     end_season:
       default: "NA"
       doc: Last Month to Drop
