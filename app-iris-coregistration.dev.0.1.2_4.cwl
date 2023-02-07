@@ -21,12 +21,15 @@ $graph:
         position: 3
         prefix: --aoi
       type: string?
-    coreg_type_2:
+    coreg_type_3:
       inputBinding:
         position: 4
         prefix: --coregistration
       type:
-        symbols: ["Automatic","Rigid","Elastic"]
+        symbols: &id001
+        - Automatic
+        - Rigid
+        - Elastic
         type: enum
   outputs:
     results:
@@ -64,12 +67,15 @@ $graph:
       doc: Area of interest in Well-known Text (WKT)
       label: Area of interest in Well-known Text (WKT)
       type: string?
-    coreg_type_2:
+    coreg_type_3:
       default: Elastic
       doc: Coregistration type
       label: Coregistration type
       type:
-        symbols: ["Automatic","Rigid","Elastic"]
+        symbols: &id001
+        - Automatic
+        - Rigid
+        - Elastic
         type: enum
   label: IRIS Optical Image Co-registration
   outputs:
@@ -83,7 +89,7 @@ $graph:
         pre_event: pre_event
         post_event: post_event
         aoi: aoi
-        coreg_type_2: coreg_type_2
+        coreg_type_3: coreg_type_3
       out:
       - results
       run: '#clt'
