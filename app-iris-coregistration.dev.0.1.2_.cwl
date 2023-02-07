@@ -26,7 +26,7 @@ $graph:
         position: 4
         prefix: --coregistration
       type:
-        symbols:
+        symbols: &id001
         - Automatic
         - Rigid
         - Elastic
@@ -72,11 +72,8 @@ $graph:
       doc: Coregistration type
       label: Coregistration type
       type:
-        - symbols: 
-          - Automatic
-          - Rigid
-          - Elastic
-          type: enum
+        symbols: *id001
+        type: enum
   label: IRIS Optical Image Co-registration
   outputs:
   - id: wf_outputs
