@@ -31,6 +31,20 @@ $graph:
           - Automatic
           - Rigid
           - Elastic
+
+    end_season:
+      default: "NA"
+      doc: Last Month to Drop
+      label: Last Month to Drop
+      type:
+        - type: enum
+          symbols: ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec", "NA"]
+    start_season:
+      doc: First Month to Drop
+      label: First Month to Drop
+      type:
+        - type: enum
+          symbols: ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"]
   outputs:
     results:
       outputBinding:
