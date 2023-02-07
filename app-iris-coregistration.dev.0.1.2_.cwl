@@ -107,6 +107,6 @@ $graph:
 $namespaces:
   s: https://schema.org/
 cwlVersion: v1.0
-s:softwareVersion: 0.1.2
+s:softwareVersion: 0.1.2_bb
 schemas:
 - http://schema.org/version/9.0/schemaorg-current-http.rdf
