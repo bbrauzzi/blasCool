@@ -26,11 +26,11 @@ $graph:
         position: 4
         prefix: --coregistration
       type:
-        type: enum
-        symbols: &id001
-        - Automatic
-        - Rigid
-        - Elastic
+        - type: enum
+          symbols: &id001
+          - Automatic
+          - Rigid
+          - Elastic
   outputs:
     results:
       outputBinding:
