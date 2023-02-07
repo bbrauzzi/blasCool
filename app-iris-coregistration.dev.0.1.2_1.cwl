@@ -72,7 +72,7 @@ $graph:
       doc: Coregistration type
       label: Coregistration type
       type:
-        symbols: *id001
+        symbols: &id001
         - Automatic
         - Rigid
         - Elastic
