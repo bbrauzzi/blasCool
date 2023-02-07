@@ -73,6 +73,9 @@ $graph:
       label: Coregistration type
       type:
         symbols: *id001
+        - Automatic
+        - Rigid
+        - Elastic
         type: enum
   label: IRIS Optical Image Co-registration
   outputs:
