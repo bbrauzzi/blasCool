@@ -26,7 +26,7 @@ $graph:
         position: 4
         prefix: --coregistration
       type:
-        - symbols: &id001
+        - symbols:
             - Automatic
             - Rigid
             - Elastic
