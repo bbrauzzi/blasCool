@@ -21,19 +21,16 @@ $graph:
         position: 3
         prefix: --aoi
       type: string?
-    end_season:
-      default: "NA"
-      doc: Last Month to Drop
-      label: Last Month to Drop
+    coreg_type:
+      inputBinding:
+        position: 4
+        prefix: --coregistration
       type:
-        - type: enum
-          symbols: ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec", "NA"]
-    start_season:
-      doc: First Month to Drop
-      label: First Month to Drop
-      type:
-        - type: enum
-          symbols: ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"]
+        symbols: &id001
+        - Automatic
+        - Rigid
+        - Elastic
+        type: enum
   outputs:
     results:
       outputBinding:
@@ -75,7 +72,10 @@ $graph:
       doc: Coregistration type
       label: Coregistration type
       type:
-        symbols: *id001
+        symbols: &id001
+          - Automatic
+          - Rigid
+          - Elastic
         type: enum
   label: IRIS Optical Image Co-registration
   outputs:
