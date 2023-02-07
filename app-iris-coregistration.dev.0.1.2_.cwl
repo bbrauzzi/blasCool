@@ -72,11 +72,11 @@ $graph:
       doc: Coregistration type
       label: Coregistration type
       type:
-        symbols: 
-        - Automatic
-        - Rigid
-        - Elastic
-        type: enum
+        - symbols: 
+          - Automatic
+          - Rigid
+          - Elastic
+          type: enum
   label: IRIS Optical Image Co-registration
   outputs:
   - id: wf_outputs
