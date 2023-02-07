@@ -21,7 +21,7 @@ $graph:
         position: 3
         prefix: --aoi
       type: string?
-    coreg_type:
+    coreg_type_1:
       inputBinding:
         position: 4
         prefix: --coregistration
@@ -67,12 +67,12 @@ $graph:
       doc: Area of interest in Well-known Text (WKT)
       label: Area of interest in Well-known Text (WKT)
       type: string?
-    coreg_type:
+    coreg_type_1:
       default: Elastic
       doc: Coregistration type
       label: Coregistration type
       type:
-        symbols:
+        symbols: *id001
         - Automatic
         - Rigid
         - Elastic
@@ -89,7 +89,7 @@ $graph:
         pre_event: pre_event
         post_event: post_event
         aoi: aoi
-        coreg_type: coreg_type
+        coreg_type_1: coreg_type_1
       out:
       - results
       run: '#clt'
