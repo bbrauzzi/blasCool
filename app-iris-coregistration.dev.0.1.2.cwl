@@ -26,10 +26,7 @@ $graph:
         position: 4
         prefix: --coregistration
       type:
-        symbols:
-        - Automatic
-        - Rigid
-        - Elastic
+        symbols: ["Automatic","Rigid","Elastic"]
         type: enum
   outputs:
     results:
@@ -72,10 +69,7 @@ $graph:
       doc: Coregistration type
       label: Coregistration type
       type:
-        symbols:
-        - Automatic
-        - Rigid
-        - Elastic
+        symbols: ["Automatic","Rigid","Elastic"]
         type: enum
   label: IRIS Optical Image Co-registration
   outputs:
