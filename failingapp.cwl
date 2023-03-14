@@ -3,7 +3,7 @@ $graph:
   baseCommand: bash
   arguments:
   - "-c"
-  - "exit 1"
+  - "exit 33"
   hints:
     DockerRequirement:
       dockerPull: docker.io/library/bash:5
