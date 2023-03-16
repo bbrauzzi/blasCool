@@ -3,7 +3,7 @@ $graph:
   baseCommand: bash
   arguments:
   - "-c"
-  - "exit 33"
+  - "sleep 30 && exit 33"
   hints:
     DockerRequirement:
       dockerPull: docker.io/library/bash:5
@@ -45,6 +45,6 @@ $graph:
 $namespaces:
   s: https://schema.org/
 cwlVersion: v1.0
-s:softwareVersion: 1.0.0
+s:softwareVersion: 1.0.1
 schemas:
 - http://schema.org/version/9.0/schemaorg-current-http.rdf
